@@ -579,6 +579,9 @@ require('lazy').setup({
         -- tsserver = {},
         --
 
+        rubocop = {},
+        tsserver = {},
+        html = {},
         lua_ls = {
           -- cmd = {...},
           -- filetypes = { ...},
