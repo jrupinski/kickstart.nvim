@@ -4,4 +4,5 @@
 -- See the kickstart.nvim README for more information
 return {
   'tpope/vim-fugitive',
+  'tpope/vim-unimpaired',
 }
