@@ -692,9 +692,7 @@ require('lazy').setup({
         },
         solargraph = {
           cmd = {
-            'bundle',
-            'exec',
-            'solargraph',
+            os.getenv 'HOME' .. '/.rbenv/shims/solargraph',
             'stdio',
           },
           settings = {
