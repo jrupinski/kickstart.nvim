@@ -641,17 +641,8 @@ require('lazy').setup({
             },
           },
         },
-        solargraph = {
-          cmd = {
-            os.getenv 'HOME' .. '/.rbenv/shims/solargraph',
-            'stdio',
-          },
-          settings = {
-            solargraph = {
-              diagnostics = true,
-              formatting = true,
-            },
-          },
+        ruby_lsp = {
+          cmd = { os.getenv 'HOME' .. '/.rbenv/shims/ruby-lsp' },
         },
       }
 
