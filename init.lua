@@ -690,6 +690,20 @@ require('lazy').setup({
             },
           },
         },
+        solargraph = {
+          cmd = {
+            'bundle',
+            'exec',
+            'solargraph',
+            'stdio',
+          },
+          settings = {
+            solargraph = {
+              diagnostics = true,
+              formatting = true,
+            },
+          },
+        },
       }
 
       -- Ensure the servers and tools above are installed
