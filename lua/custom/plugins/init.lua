@@ -3,6 +3,7 @@
 --
 -- See the kickstart.nvim README for more information
 return {
+  'catppuccin/nvim',
   'tpope/vim-fugitive',
   'tpope/vim-unimpaired',
 }
