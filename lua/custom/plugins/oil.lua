@@ -13,11 +13,22 @@ return {
       require('oil').setup {
         columns = { 'icon' },
         keymaps = {
+          -- Do not override tmux keymaps
           ['<C-h>'] = false,
           ['<C-l>'] = false,
           ['<C-k>'] = false,
           ['<C-j>'] = false,
-          ['<M-h>'] = 'actions.select_split',
+          -- ['<M-h>'] = 'actions.select_split',
+          ['<C-v>'] = { 'actions.select', opts = { vertical = true }, desc = 'Open the entry in a vertical split' },
+          ['<C-s>'] = { 'actions.select', opts = { horizontal = true }, desc = 'Open the entry in a horizontal split' },
+          ['<C-t>'] = { 'actions.select', opts = { tab = true }, desc = 'Open the entry in new tab' },
+          ['yp'] = {
+            callback = function()
+              require('oil.actions').copy_entry_path.callback()
+              vim.fn.setreg('+', vim.fn.getreg(vim.v.register))
+            end,
+            desc = 'Copy filepath to system clipboard',
+          },
         },
         win_options = {
           winbar = '%{v:lua.CustomOilBar()}',
