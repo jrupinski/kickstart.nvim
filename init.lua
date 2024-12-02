@@ -695,6 +695,8 @@ require('lazy').setup({
             },
           },
         },
+        -- For local env, i need to set database.yml host to 'localhost', not docker container
+        -- Use defaults, and use LSP formtter rubocop instance
         ruby_lsp = {},
       }
 
