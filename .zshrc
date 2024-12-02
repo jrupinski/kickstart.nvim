@@ -115,3 +115,8 @@ source /Users/jakubrupinski/.docker/init-zsh.sh || true # Added by Docker Deskto
 export EDITOR="nvim"
 export PATH="$HOME/.tmuxifier/bin:$PATH"
 eval "$(tmuxifier init -)"
+
+# Use rubocop daemon instead of regular rubocop
+export PATH="/usr/local/bin/rubocop-daemon-wrapper:$PATH"
+
+
