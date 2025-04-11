@@ -4,6 +4,17 @@ return {
     -- Enable `lukas-reineke/indent-blankline.nvim`
     -- See `:help ibl`
     main = 'ibl',
-    opts = {},
+    opts = {
+      indent = {
+        char = ' ',
+      },
+      scope = {
+        char = '┊',
+        -- Enable for all languages (may cause some issues, see docs/enable per-language)
+        include = {
+          node_type = { ['*'] = { '*' } },
+        },
+      },
+    },
   },
 }
